@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تطبيق الألعاب</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#e9eef3;color:#25445c}
+header{background:#205782;color:white;padding:15px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;font-weight:bold;font-style:italic}
+button{border:0;border-radius:9px;padding:12px;font-size:14px;cursor:pointer}
+.login{background:#286c9d;color:white}
+.register{background:#8ab934;color:white}
+.hero{margin:12px;padding:28px 18px;background:linear-gradient(120deg,#08243c,#176b91);border-radius:15px;color:white}
+.hero h2{font-size:25px}
+.hero p{color:#d9e8f2;line-height:1.7}
+.section{background:white;margin:12px;padding:15px;border-radius:15px}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+.game{background:#f0f4f7;padding:16px 4px;border-radius:12px}
+.icon{font-size:35px;display:block;margin-bottom:8px}
+nav{position:fixed;bottom:0;left:0;right:0;background:white;display:flex;justify-content:space-around;padding:12px 2px;border-top:1px solid #dce4eb}
+nav button{background:white;color:#416782;padding:8px 5px}
+main{padding-bottom:80px}
+.notice{font-size:12px;color:#718596;text-align:center;padding:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">APP <span style="color:#a9d84b">GAMES</span></div>
+  <div>
+    <button class="login" onclick="showMessage('تسجيل الدخول')">الدخول</button>
+    <button class="register" onclick="showMessage('إنشاء حساب')">التسجيل</button>
+  </div>
+</header><main>
+  <section class="hero">
+    <h2>مرحباً بك</h2>
+    <p>اكتشف الألعاب واستمتع بتجربة استخدام سهلة من هاتفك.</p>
+    <button class="register" onclick="showMessage('الألعاب')">اكتشف المزيد</button>
+  </section>  <section class="section">
+    <h3>الألعاب</h3>
+    <div class="games">
+      <div class="game"><span class="icon">🎰</span>ألعاب السلوتس</div>
+      <div class="game"><span class="icon">🎲</span>ألعاب الطاولة</div>
+      <div class="game"><span class="icon">💎</span>الألعاب المميزة</div>
+      <div class="game"><span class="icon">🎯</span>ألعاب متنوعة</div>
+      <div class="game"><span class="icon">🎁</span>المكافآت</div>
+      <div class="game"><span class="icon">⭐</span>المفضلة</div>
+    </div>
+  </section>  <section class="section">
+    <h3>حسابك</h3>
+    <p>يمكنك استكشاف الواجهة والتنقل بين أقسامها.</p>
+    <button class="login" onclick="showMessage('حساب المستخدم')">فتح الحساب</button>
+  </section>  <p class="notice">واجهة تجريبية مستقلة، ولا تتصل بأي خدمة مالية أو حساب حقيقي.</p>
+</main><nav>
+  <button onclick="showMessage('القائمة')">☰<br>القائمة</button>
+  <button onclick="showMessage('الحساب')">👤<br>حسابي</button>
+  <button onclick="showMessage('الألعاب')">🎮<br>الألعاب</button>
+  <button onclick="showMessage('المفضلة')">⭐<br>المفضلة</button>
+</nav><script>
+function showMessage(section){
+  alert('قسم '+section+' — هذه واجهة تجريبية.');
+}
+</script></body>
+</html>
